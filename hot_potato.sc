@@ -33,7 +33,27 @@ global_explosion_messages = [
     '{} will forever be known as the person who couldn\'t pass a potato.',
     'Ladies and gentlemen, {} just proved potatoes are dangerous!',
     '{} is now suffering from severe potato-related embarrassment.',
-    'The potato has spoken. {} was not worthy.'
+    'The potato has spoken. {} was not worthy.',
+    '{} got absolutely ROASTED! Literally!',
+    'KABOOM! {} lost at hot potato! Classic!',
+    '{} tried to befriend the potato. It backfired. Explosively.',
+    'The potato won this round. {} lost. Badly.',
+    '{} just learned a valuable lesson about hot potatoes!',
+    'BOOM! {} is now a cautionary tale!',
+    '{} got potato-ed! That\'s not even a word but it happened!',
+    'Explosion at {}\' location! Cause: Potato!',
+    '{} speedran losing at hot potato!',
+    'History will remember {} as "The Potato Victim"',
+    '{} became one with the potato. Explosively.',
+    'Hot potato: 1, {}: 0',
+    '{} just earned the title "Potato Holder" (Derogatory)',
+    'The potato claimed another victim: {}!',
+    'F in chat for {}. They got potato-bombed!',
+    '{} learned that some potatoes fight back!',
+    'BOOM! {} will never look at potatoes the same way!',
+    '{} forgot the "hot" part of "hot potato"!',
+    'The potato explosion heard \'round the server: {}!',
+    '{} got served... by a potato!'
 ];
 
 // Messages during the game
@@ -119,26 +139,22 @@ start_game() -> (
     // Give them the potato
     give_potato(starter);
 
-    // Announce game start
-    announcement = format(
-        'r ========================================',
-        '\n', 'y        🥔 HOT POTATO GAME! 🥔',
-        '\n', 'r ========================================',
-        '\n',
-        '\n', 'g 👉 ', 'y ' + global_potato_holder, 'r  HAS THE HOT POTATO!',
-        '\n',
-        '\n', 'g 📋 HOW TO PLAY:',
-        '\n', 'g   • Get within ', 'y ' + global_pass_distance + ' blocks', 'g  of another player to pass it',
-        '\n', 'g   • The potato will ', 'r AUTO-PASS', 'g  when you\'re close enough',
-        '\n', 'g   • Don\'t let it explode on YOU!',
-        '\n',
-        '\n', 'r ⏰ Time until BOOM: ', 'y ' + global_potato_duration + ' seconds',
-        '\n',
-        '\n', 'r ========================================'
-    );
-
+    // Announce game start (split into multiple messages to avoid length limits)
     for(player('all'),
-        print(_, announcement)
+        print(_, format('r ========================================'));
+        print(_, format('y        🥔 HOT POTATO GAME! 🥔'));
+        print(_, format('r ========================================'));
+        print(_, '');
+        print(_, format('g 👉 ', 'y ' + global_potato_holder, 'r  HAS THE HOT POTATO!'));
+        print(_, '');
+        print(_, format('g 📋 HOW TO PLAY:'));
+        print(_, format('g   • Get within ', 'y ' + global_pass_distance + ' blocks', 'g  of another player'));
+        print(_, format('g   • The potato will ', 'r AUTO-PASS', 'g  when you\'re close'));
+        print(_, format('g   • Don\'t let it explode on YOU!'));
+        print(_, '');
+        print(_, format('r ⏰ Time until BOOM: ', 'y ' + global_potato_duration + ' seconds'));
+        print(_, '');
+        print(_, format('r ========================================'))
     );
 
     sound('entity.ender_dragon.growl', query(starter, 'pos'));

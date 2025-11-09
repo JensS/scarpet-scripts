@@ -33,7 +33,17 @@ global_ore_messages = {
         'DIAMONDS! Time to make that pickaxe you\'ve been dreaming about!',
         'Oooh shiny blue rocks! Your Minecraft life just got an upgrade!',
         'DIAMONDS! Fun fact: Statistically you were more likely to find love, but here we are!',
-        'Diamonds found! Remember: Fortune III or cry forever.'
+        'Diamonds found! Remember: Fortune III or cry forever.',
+        'JACKPOT! Diamonds baby! Your mining skills are legendary!',
+        'Holy mother of blocks, DIAMONDS! Today is your day!',
+        'DIAMONDS! The rarest of the rare! You magnificent miner!',
+        'Sweet shiny diamonds! Now don\'t fall in lava!',
+        'DIAMOND STRIKE! You hit the motherload!',
+        'Yes! YES! DIAMONDS! I\'m more excited than you are!',
+        'Diamond ore detected! Your dedication has paid off!',
+        'BINGO! Diamonds! This is why you mine!',
+        'DIAMONDS! Quick, tell everyone! Show off those sparkles!',
+        'Found diamonds! Your pick finally found its purpose!'
     ],
     'deepslate_diamond_ore' -> [
         'Deep slate diamonds! You went DEEP for that bling!',
@@ -45,7 +55,13 @@ global_ore_messages = {
         'ANCIENT DEBRIS! You\'re basically rich now! Netherite here we come!',
         'Ancient debris! Time to flex on your friends with that netherite gear!',
         'You found ancient debris! The flex-iest material in all of Minecraft!',
-        'ANCIENT DEBRIS! You mad lad, you actually went mining in the Nether!'
+        'ANCIENT DEBRIS! You mad lad, you actually went mining in the Nether!',
+        'Holy Nether! Ancient debris! You\'re braver than most!',
+        'JACKPOT! Ancient debris! Netherite armor incoming!',
+        'Ancient debris found! You absolute legend!',
+        'The rarest of the rare! Ancient debris! Well done!',
+        'Found ancient debris! Mining in hell pays off!',
+        'DEBRIS! The ultimate flex material! Get it!'
     ],
     'emerald_ore' -> [
         'An emerald! Wow! These are rarer than your chances of beating the Ender Dragon first try!',
@@ -92,19 +108,49 @@ global_oops_messages = {
         'Lava: 1, You: 0. Maybe look before you leap next time?',
         'Well, that was a warm welcome! Watch out for lava!',
         'RIP your items. The lava thanks you for the donation.',
-        'And that, kids, is why we don\'t swim in lava. Stay in school.'
+        'And that, kids, is why we don\'t swim in lava. Stay in school.',
+        'Lava is not your friend! It\'s hot, deadly, and unforgiving!',
+        'Did the glowing orange liquid not tip you off? That\'s LAVA!',
+        'Pro tip: Lava kills. Write that down.',
+        'Congratulations! You found lava the hard way!',
+        'Lava: Still hot. Still deadly. Still not sorry.',
+        'Your items are now part of the lava collection. Permanently.',
+        'Note to self: Lava bad. Very very bad.',
+        'That lava came out of nowhere! (It didn\'t, you just didn\'t look)',
+        'The lava gods claim another victim!',
+        'Maybe invest in Fire Resistance next time?'
     ],
     'fall' -> [
         'Gravity wins again! Try using blocks next time?',
         'That was a long way down... Should\'ve brought a water bucket!',
         'Fun fact: Humans can\'t fly in Minecraft. Or in real life. Hope that helps!',
-        'The ground sends its regards. Also, its condolences.'
+        'The ground sends its regards. Also, its condolences.',
+        'And down you go! Gravity: Undefeated champion!',
+        'Fall damage is real! Remember that!',
+        'Physics lesson complete. Cost: Your life.',
+        'That landing could use some work!',
+        'Splat! Maybe use the stairs next time?',
+        'Gravity check: Still working!',
+        'You took the express route down!',
+        'The ground was very excited to meet you!',
+        'Next time: MLG water bucket. Look it up.',
+        'Falling with style! Well, falling anyway.'
     ],
     'creeper' -> [
         'That creeper had YOUR name on it! Stay alert out there!',
         'Creeper: 1, You: 0. They\'re quiet but deadly!',
         'Boom goes the creeper! And you. Mostly you.',
-        'A creeper hugged you to death. How sweet. And explosive.'
+        'A creeper hugged you to death. How sweet. And explosive.',
+        'That\'s a creeper, not a pet! Run next time!',
+        'SSSSSSurprise! Hope you enjoyed that creeper cuddle!',
+        'Creepers don\'t want hugs. They want explosions.',
+        'Creeper says: "That\'s a nice everything you have there!"',
+        'Explosive personality detected. It was the creeper.',
+        'Creepers: The ultimate jump scare. Every. Time.',
+        'You got SSSS-ambushed!',
+        'And BOOM goes the dynamite! Er, creeper.',
+        'Creeper therapy is explosive, apparently!',
+        'Pro tip: Sword first, questions later!'
     ]
 };
 
@@ -167,7 +213,19 @@ __on_player_breaks_block(player, block) -> (
             'Your pickaxe is crying. Give it a break... then keep going!',
             'Mining level: Expert. Life choices: Questionable. Overall: Amazing!',
             'At this rate, you\'ll hollow out the entire world!',
-            'Someone give this miner a medal! Or at least some snacks.'
+            'Someone give this miner a medal! Or at least some snacks.',
+            'Keep digging! The good stuff is just around the corner!',
+            'Mining marathon in progress! You\'re crushing it!',
+            'Impressive dedication! Don\'t forget to hydrate!',
+            'The blocks fear you at this point!',
+            'Your mining game is strong! Respect!',
+            'Keep going! Fortune favors the persistent miner!',
+            'Block by block, you\'re making progress!',
+            'Your pickaxe is your best friend at this point!',
+            'Mining machine activated! Keep it up!',
+            'You\'re in the zone! Don\'t stop now!',
+            'Fantastic progress! Keep on digging!',
+            'Your mining skills are off the charts!'
         ];
         msg = generic_encouragements:(floor(rand(length(generic_encouragements))));
         print(player, format('g [', 'y Mining Coach', 'g ] ', 'l ' + msg))
