@@ -92,8 +92,8 @@ get_pair_key(p1, p2) -> (
 
 // Check for proximity between all players
 check_proximity() -> (
-    if(!global_enabled, 
-        schedule(100, check_proximity);
+    if(!global_enabled,
+        schedule(100, 'check_proximity');
         return()
     );
     
@@ -148,9 +148,9 @@ check_proximity() -> (
             )
         )
     );
-    
+
     // Check again in 5 seconds (100 ticks)
-    schedule(100, check_proximity)
+    schedule(100, 'check_proximity')
 );
 
 // Start checking when script loads
