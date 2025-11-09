@@ -160,7 +160,7 @@ start_game() -> (
     sound('entity.ender_dragon.growl', query(starter, 'pos'));
 
     // Start game loop
-    schedule(20, 'game_tick');
+    schedule(20, 'game_tick')
 );
 
 
