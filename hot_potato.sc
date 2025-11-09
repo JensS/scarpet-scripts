@@ -140,7 +140,7 @@ start_game() -> (
     give_potato(starter);
 
     // Announce game start (split into multiple messages to avoid length limits)
-    for(player('all'),
+    for(player('all'), (
         print(_, format('r ========================================'));
         print(_, format('y        🥔 HOT POTATO GAME! 🥔'));
         print(_, format('r ========================================'));
@@ -155,7 +155,7 @@ start_game() -> (
         print(_, format('r ⏰ Time until BOOM: ', 'y ' + global_potato_duration + ' seconds'));
         print(_, '');
         print(_, format('r ========================================'))
-    );
+    ));
 
     sound('entity.ender_dragon.growl', query(starter, 'pos'));
 
